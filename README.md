@@ -22,10 +22,11 @@ Usage:
     
 #### Screenshots
 - English
-![recover_en](https://raw.githubusercontent.com/blackPantherOS/encfs-password-recover/master/recover_en.jpg)
 
+![recover_en](https://github.com/blackPantherOS/encfs-password-recover/blob/master/screenshots/recover_en.png)
 
 - Hungarian
-![recover_hu](https://raw.githubusercontent.com/blackPantherOS/encfs-password-recover/master/recover_hu.jpg)
+
+![recover_hu](https://github.com/blackPantherOS/encfs-password-recover/blob/master/screenshots/recover_hu.png)
 
 
