@@ -10,7 +10,7 @@ Usage:
 -	Test generator with demo key 
 -	Go to step 2.) and skip b.)
 -    b.) Add your know word to KNOWWORDS file
--	See: encfs-password-genrandom.sh -h and user this tool
+-	See: encfs-password-genrandom.sh -h and use this tool
 -	Run encfs-password-genrandom.sh 10000 10 > ownpasslist
 -	Skip 2.)
 
@@ -19,4 +19,13 @@ Usage:
     
 #### 3.) Run the recovery tool, example: 
     `encfs-password-recover.sh ~/path/to/encfs ~/path/to/decrypted ~/path/to/ownpasslist`
+    
+#### Screenshots
+- English
+![recover_en](https://raw.githubusercontent.com/blackPantherOS/encfs-password-recover/master/recover_en.jpg)
+
+
+- Hungarian
+![recover_hu](https://raw.githubusercontent.com/blackPantherOS/encfs-password-recover/master/recover_hu.jpg)
+
 
