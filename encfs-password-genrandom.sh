@@ -68,6 +68,6 @@ count=0
 while true; do 
  [ "$count" == $NUM ]&&exit
  shuf -n $LONG $KNOWWORDS | sed "s/./\u&/" | tr -d "\n" 
- echo 
+ echo
  count=$(expr $count + 1)
 done

@@ -21,7 +21,7 @@ case $LANG in
 	key_txt="kulcs:"
 	result="eredménye"
 	found="Megtalált jelszó!"
-	recovered=" Kulcs helyreállítva - a jelszó:"
+	recovered=" Kulcs megtalálva és helyreállítva - a jelszó:"
     ;;
     *)
 	pass_num="Number of readed passwds:"
@@ -29,7 +29,7 @@ case $LANG in
 	key_txt="key result:"
 	result="result"
 	found="Found password!"
-	recovered=" Key recovered - the password is:"
+	recovered=" Key found and recovered - the password is:"
     ;;
 esac
 
@@ -37,6 +37,8 @@ esac
 [ ! -n "$2" ]&& echo "Missing second parameter: ~/Dencrypted directory" && exit
 [ ! -n "$3" ]&& echo "Missing 3rd parameter: ~/passwordlist file" && exit
 
+[ ! -d "$2" ]&& mkdir -p "$2"
+ 
 counter=1
 lines=$(expr `cat $3 | wc -l` + 1)
 echo "$pass_num: $lines"
@@ -47,10 +49,10 @@ while [ true ]; do
    echo "$(head -n $counter $3 | tail -n 1)" | encfs $1 $2 --stdinpass 
     if [ "$?" -eq "0" ]; then
 	echo "$found"; echo
-	echo "  *********************************************************"
+	echo "  ***************************************************************"
         echo -n "  * $recovered "
         echo "$(head -n $counter $3 | tail -n 1)"
-	echo "  *********************************************************"
+	echo "  ***************************************************************"
 	echo 
         exit
     fi

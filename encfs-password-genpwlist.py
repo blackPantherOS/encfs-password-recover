@@ -54,7 +54,7 @@ combs = itertools.product(
 for e in combs:
     pwd = "".join(e)
     print(pwd)
-    # use for test and stop if generated this demo key ,just add XXX to key to ignore this line
-    if pwd == "#EncFS$Rec@ver!123":
+    # use for test and stop if generated your demo key, just add XXX to key to ignore this line, or delete XXX for use for test
+    if pwd == "XXX#EncFS$Rec@ver!123":
         print ("-- OK -- Last key is your generated demo key!")
         break
