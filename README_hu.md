@@ -22,6 +22,13 @@ Használat:
 #### 3.) Futtasd a helyreállító eszközt, például: 
     `encfs-password-recover.sh ~/path/to/encfs ~/path/to/decrypted ~/path/to/ownpasslist`
     
+#### Használati példa a demo adatokhoz
+    `
+    cd /tmp
+    git clone https://github.com/blackPantherOS/encfs-password-recover.git
+    cd encfs-password-recover
+    ./encfs-password-recover.sh /tmp/encfs-password-recover/enc /tmp/encfs-password-recover/denc /tmp/encfs-password-recover/pwlist
+    `
 #### Screenshots
 - English
 
