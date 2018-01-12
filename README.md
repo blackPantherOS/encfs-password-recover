@@ -19,7 +19,14 @@ Usage:
     
 #### 3.) Run the recovery tool, example: 
     `encfs-password-recover.sh ~/path/to/encfs ~/path/to/decrypted ~/path/to/ownpasslist`
-    
+
+#### Usage example with datas of demoz
+    `
+    cd /tmp
+    git clone https://github.com/blackPantherOS/encfs-password-recover.git
+    cd encfs-password-recover
+    ./encfs-password-recover.sh /tmp/encfs-password-recover/enc /tmp/encfs-password-recover/denc /tmp/encfs-password-recover/pwlist
+    `
 #### Screenshots
 - English
 
