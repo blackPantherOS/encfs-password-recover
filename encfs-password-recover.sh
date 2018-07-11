@@ -38,22 +38,22 @@ esac
 [ ! -n "$3" ]&& echo "Missing 3rd parameter: ~/passwordlist file" && exit
 
 [ ! -d "$2" ]&& mkdir -p "$2"
- 
+
 counter=1
 lines=$(expr `cat $3 | wc -l` + 1)
 echo "$pass_num: $lines"
 unlines=$lines
 sleep 1
 while [ true ]; do
-   echo -n "$first ${unlines}. $key_txt $(head -n $counter $3 | tail -n 1) $result -> " 
-   echo "$(head -n $counter $3 | tail -n 1)" | encfs $1 $2 --stdinpass 
+   echo -n "$first ${unlines}. $key_txt $(head -n $counter $3 | tail -n 1) $result -> "
+   echo "$(head -n $counter $3 | tail -n 1)" | encfs $1 $2 --stdinpass
     if [ "$?" -eq "0" ]; then
 	echo "$found"; echo
 	echo "  ************************************************************************"
         echo -n "  * $recovered "
         echo "$(head -n $counter $3 | tail -n 1)"
 	echo "  ************************************************************************"
-	echo 
+	echo
 	sleep 2
         exit
     fi

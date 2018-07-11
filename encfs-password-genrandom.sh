@@ -36,9 +36,9 @@ if [ ! -f "$KNOWWORDS" ];then
 echo "
     Your Password examples $KNOWWORDS file is missing!
     The --help or -h usable as well
-    Now created a empty file, the name is: $KNOWWORDS, 
+    Now created a empty file, the name is: $KNOWWORDS,
     Please enter your know words from your remember passwd:
-    
+   
     "
     touch $KNOWWORDS
     exit
@@ -61,13 +61,13 @@ if [ "$NUM" != "--auto" -o ! -n "$NUM" ];then
     EXIT=1
 fi
 if [ "$NUM" != "--auto" -a -n "$EXIT" ];then
-echo " * DEMO Genrator now start and stop when is counter reaches to end (Cancel: Ctrl+C)"
-sleep 4
+    echo " * DEMO Genrator now start and stop when is counter reaches to end (Cancel: Ctrl+C)"
+    sleep 4
 fi
 count=0
-while true; do 
- [ "$count" == $NUM ]&&exit
- shuf -n $LONG $KNOWWORDS | sed "s/./\u&/" | tr -d "\n" 
- echo
- count=$(expr $count + 1)
+while :; do
+    [ "$count" = $NUM ] && exit
+    shuf -n $LONG $KNOWWORDS | sed "s/./\u&/" | tr -d "\n"
+    echo
+    count=$(expr $count + 1)
 done
